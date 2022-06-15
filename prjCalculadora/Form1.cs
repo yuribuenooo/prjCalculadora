@@ -18,63 +18,83 @@ namespace prjCalculadora
         }
 
         Calculadora Logica = new Calculadora();
+        bool EstadoIgual = false;
 
         private void btn0_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn0.Text);
             lbVisor.Text = Logica.visor;
         }
 
+        private void TestarIgual (object sender, EventArgs e)
+        {
+            if (EstadoIgual == true)
+            {
+                btnCE_Click(sender, e);
+                EstadoIgual = false;
+            }
+        }
+
         private void btn1_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn1.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn2.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn3.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn4.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn5.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn6.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn7.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn8.Text);
             lbVisor.Text = Logica.visor;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
+            TestarIgual(sender, e);
             Logica.SetVisor(btn9.Text);
             lbVisor.Text = Logica.visor;
         }
@@ -93,13 +113,15 @@ namespace prjCalculadora
 
         private void btnSomar_Click(object sender, EventArgs e)
         {
-            Logica.Op = "+";
+            
+             Logica.Op = "+";
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Logica.Calcular();
             lbVisor.Text = Logica.visor;
+            EstadoIgual = true;
         }
 
         private void btnSubtrair_Click(object sender, EventArgs e)
@@ -127,24 +149,28 @@ namespace prjCalculadora
         {
             Logica.RaizQuadrada();
             lbVisor.Text = Logica.visor;
+            EstadoIgual = true;
         }
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
             Logica.Porcentagem();
             lbVisor.Text = Logica.visor;
+            EstadoIgual = true;
         }
 
         private void btnFracao_Click(object sender, EventArgs e)
         {
             Logica.Fracao();
             lbVisor.Text = Logica.visor;
+            EstadoIgual = true;
         }
 
         private void btnQuadrado_Click(object sender, EventArgs e)
         {
             Logica.Quadrado();
             lbVisor.Text = Logica.visor;
+            EstadoIgual = true;
         }
 
         private void btnPontoDecimal_Click(object sender, EventArgs e)
@@ -163,9 +189,64 @@ namespace prjCalculadora
         {
             if (Char.IsNumber(e.KeyChar))
             {
-                Logica.SetVisor(Convert.ToString(e.KeyChar));
+                TestarIgual(sender, e);
+                Logica.SetVisor(e.KeyChar.ToString());
                 lbVisor.Text = Logica.visor;
+                return;
             }
+
+            if (e.KeyChar == '+') Logica.Op ="+";
+            if (e.KeyChar == '-') Logica.Op = "-";
+            if (e.KeyChar == '*') Logica.Op = "*";
+            if (e.KeyChar == '/') Logica.Op = "/";
+            if (e.KeyChar == '=') 
+            {
+                btnCalcular_Click(sender, e);
+            }
+       
+
+        }
+
+        private void btnSeno_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.Seno();
+            lbVisor.Text = Logica.visor;
+        }
+
+        private void btnCosseno_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.Cosseno();
+            lbVisor.Text = Logica.visor;
+        }
+
+        private void btnTangente_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.Tangente();
+            lbVisor.Text = Logica.visor;
+        }
+
+        private void btnPi_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.PI();
+            lbVisor.Text = Logica.visor;
+        }
+
+        private void btnEuller_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.Euller();
+            lbVisor.Text = Logica.visor;
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            EstadoIgual = true;
+            Logica.Log();
+            lbVisor.Text = Logica.visor;
         }
     }
 }

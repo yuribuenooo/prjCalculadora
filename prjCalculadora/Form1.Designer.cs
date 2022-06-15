@@ -49,13 +49,21 @@
             this.btnCE = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
             this.btnQuadrado = new System.Windows.Forms.Button();
-            this.btnFracao = new System.Windows.Forms.Button();
             this.btnPorcentagem = new System.Windows.Forms.Button();
             this.btnRaiz = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btnPontoDecimal = new System.Windows.Forms.Button();
             this.btnInverterSinal = new System.Windows.Forms.Button();
+            this.btnFracao = new System.Windows.Forms.Button();
+            this.btnPi = new System.Windows.Forms.Button();
+            this.btnTangente = new System.Windows.Forms.Button();
+            this.btnCosseno = new System.Windows.Forms.Button();
+            this.btnSeno = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnEuller = new System.Windows.Forms.Button();
+            this.btnLog = new System.Windows.Forms.Button();
             this.pnSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +73,7 @@
             this.pnSuperior.Controls.Add(this.lbVisor);
             this.pnSuperior.Location = new System.Drawing.Point(12, 28);
             this.pnSuperior.Name = "pnSuperior";
-            this.pnSuperior.Size = new System.Drawing.Size(1192, 100);
+            this.pnSuperior.Size = new System.Drawing.Size(1590, 100);
             this.pnSuperior.TabIndex = 0;
             // 
             // lbVisor
@@ -73,7 +81,7 @@
             this.lbVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVisor.Location = new System.Drawing.Point(17, 15);
             this.lbVisor.Name = "lbVisor";
-            this.lbVisor.Size = new System.Drawing.Size(1158, 71);
+            this.lbVisor.Size = new System.Drawing.Size(1539, 71);
             this.lbVisor.TabIndex = 0;
             this.lbVisor.Text = "0";
             this.lbVisor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -297,25 +305,13 @@
             // 
             this.btnQuadrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuadrado.Location = new System.Drawing.Point(973, 554);
+            this.btnQuadrado.Location = new System.Drawing.Point(985, 554);
             this.btnQuadrado.Name = "btnQuadrado";
             this.btnQuadrado.Size = new System.Drawing.Size(202, 113);
             this.btnQuadrado.TabIndex = 1;
             this.btnQuadrado.Text = "X²";
             this.btnQuadrado.UseVisualStyleBackColor = true;
             this.btnQuadrado.Click += new System.EventHandler(this.btnQuadrado_Click);
-            // 
-            // btnFracao
-            // 
-            this.btnFracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFracao.Location = new System.Drawing.Point(973, 413);
-            this.btnFracao.Name = "btnFracao";
-            this.btnFracao.Size = new System.Drawing.Size(202, 113);
-            this.btnFracao.TabIndex = 1;
-            this.btnFracao.Text = "⅟x";
-            this.btnFracao.UseVisualStyleBackColor = true;
-            this.btnFracao.Click += new System.EventHandler(this.btnFracao_Click);
             // 
             // btnPorcentagem
             // 
@@ -388,26 +384,142 @@
             this.btnInverterSinal.UseVisualStyleBackColor = true;
             this.btnInverterSinal.Click += new System.EventHandler(this.btnInverterSinal_Click);
             // 
+            // btnFracao
+            // 
+            this.btnFracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFracao.Location = new System.Drawing.Point(985, 413);
+            this.btnFracao.Name = "btnFracao";
+            this.btnFracao.Size = new System.Drawing.Size(202, 113);
+            this.btnFracao.TabIndex = 1;
+            this.btnFracao.Text = "⅟x";
+            this.btnFracao.UseVisualStyleBackColor = true;
+            this.btnFracao.Click += new System.EventHandler(this.btnFracao_Click);
+            // 
+            // btnPi
+            // 
+            this.btnPi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPi.Location = new System.Drawing.Point(1223, 554);
+            this.btnPi.Name = "btnPi";
+            this.btnPi.Size = new System.Drawing.Size(118, 113);
+            this.btnPi.TabIndex = 1;
+            this.btnPi.Text = "PI";
+            this.btnPi.UseVisualStyleBackColor = true;
+            this.btnPi.Click += new System.EventHandler(this.btnPi_Click);
+            // 
+            // btnTangente
+            // 
+            this.btnTangente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTangente.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTangente.Location = new System.Drawing.Point(1243, 413);
+            this.btnTangente.Name = "btnTangente";
+            this.btnTangente.Size = new System.Drawing.Size(202, 113);
+            this.btnTangente.TabIndex = 1;
+            this.btnTangente.Text = "Tangente";
+            this.btnTangente.UseVisualStyleBackColor = true;
+            this.btnTangente.Click += new System.EventHandler(this.btnTangente_Click);
+            // 
+            // btnCosseno
+            // 
+            this.btnCosseno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCosseno.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCosseno.Location = new System.Drawing.Point(1243, 279);
+            this.btnCosseno.Name = "btnCosseno";
+            this.btnCosseno.Size = new System.Drawing.Size(202, 113);
+            this.btnCosseno.TabIndex = 1;
+            this.btnCosseno.Text = "Cosseno";
+            this.btnCosseno.UseVisualStyleBackColor = true;
+            this.btnCosseno.Click += new System.EventHandler(this.btnCosseno_Click);
+            // 
+            // btnSeno
+            // 
+            this.btnSeno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeno.Location = new System.Drawing.Point(1243, 147);
+            this.btnSeno.Name = "btnSeno";
+            this.btnSeno.Size = new System.Drawing.Size(202, 113);
+            this.btnSeno.TabIndex = 1;
+            this.btnSeno.Text = "Seno";
+            this.btnSeno.UseVisualStyleBackColor = true;
+            this.btnSeno.Click += new System.EventHandler(this.btnSeno_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1362, 554);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 113);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "X²";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnQuadrado_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1486, 554);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 113);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "X²";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnQuadrado_Click);
+            // 
+            // btnEuller
+            // 
+            this.btnEuller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEuller.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEuller.Location = new System.Drawing.Point(1348, 554);
+            this.btnEuller.Name = "btnEuller";
+            this.btnEuller.Size = new System.Drawing.Size(118, 113);
+            this.btnEuller.TabIndex = 1;
+            this.btnEuller.Text = "e";
+            this.btnEuller.UseVisualStyleBackColor = true;
+            this.btnEuller.Click += new System.EventHandler(this.btnEuller_Click);
+            // 
+            // btnLog
+            // 
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.Location = new System.Drawing.Point(1472, 554);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(118, 113);
+            this.btnLog.TabIndex = 1;
+            this.btnLog.Text = "Log";
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(1216, 817);
+            this.ClientSize = new System.Drawing.Size(1614, 817);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnBK);
+            this.Controls.Add(this.btnSeno);
             this.Controls.Add(this.btnRaiz);
             this.Controls.Add(this.btnDividir);
+            this.Controls.Add(this.btnCosseno);
             this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.btnMultiplicar);
             this.Controls.Add(this.btn9);
+            this.Controls.Add(this.btnTangente);
             this.Controls.Add(this.btnFracao);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btnSubtrair);
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn7);
+            this.Controls.Add(this.btnLog);
+            this.Controls.Add(this.btnEuller);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnPi);
             this.Controls.Add(this.btnQuadrado);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnSomar);
@@ -459,13 +571,21 @@
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnQuadrado;
-        private System.Windows.Forms.Button btnFracao;
         private System.Windows.Forms.Button btnPorcentagem;
         private System.Windows.Forms.Button btnRaiz;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnPontoDecimal;
         private System.Windows.Forms.Button btnInverterSinal;
+        private System.Windows.Forms.Button btnFracao;
+        private System.Windows.Forms.Button btnPi;
+        private System.Windows.Forms.Button btnTangente;
+        private System.Windows.Forms.Button btnCosseno;
+        private System.Windows.Forms.Button btnSeno;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEuller;
+        private System.Windows.Forms.Button btnLog;
     }
 }
 
